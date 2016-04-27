@@ -1,26 +1,12 @@
 <div class = 'song_form'>
-<%= form_for([@artist, @artist.songs.build]) do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %><br>
+<%= form_for @artist do |f| %>
 
-    <h4>Upload album cover</h4>
-    <%= f.label :cover %>
-    <%= f.text_field :cover %><br>
-  </p>
-  <p>
-    <%= f.label :album %>
-    <%= f.text_field :album %><br>
-  </p>
-  <p>
-    <%= f.label :year %>
-    <%= f.text_field :year %><br>
-  </p>
-  <p>
-    <h4>Add Youtube Link here</h4>
-    <%= f.label :ylink %>
-    <%= f.text_field :ylink %><br>
-  </p>
-  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :country %>
+    <%= f.text_field :country %><br>
+
     <%= f.submit %>
   </p>
 <% end %>

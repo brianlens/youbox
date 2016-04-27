@@ -1,19 +1,15 @@
+<body>
 <p>
-  <%= @artist.name %>
+  <h1 class='artisttitle'><%= @artist.name %></h1>
+  <h2 class='artistcountry'><%= @artist.country %></h2>
 </p>
 
-<p>
-  <%= @artist.country %>
-</p>
-
-<h2>Songs</h2>
 <%= @artist.songs.each do |song| %>
-    <%= image_tag(song.cover) %><br>
-    <%= song.album %><br>
-    <%= song.year %><br>
-    <%= song.ylink %><br>
-<% end %>
-<br>
+    <div class = 'container'><img src ="<%=song.cover%>"</div>
+    <%= song.album %>
+    <%= song.year %>
+    <%= song.ylink %>
+    <% end %>
 
 <h2>Add a song for this artist!</h2>
 <div class = 'song_form'>
@@ -48,3 +44,4 @@
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artist_path %>
 </div>
+</body>
