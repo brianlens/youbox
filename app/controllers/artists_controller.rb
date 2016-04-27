@@ -9,13 +9,22 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.new
+    @song = @artist.songs.create(song_params)
     if @artist.save
       render artist_path
     else
       redirect_to root_path
+    end
   end
 
   def update
+    @artist = Artist.find(params[:id])
+  end
+
+  def new
+  end
+
+  def edit
     @artist = Artist.find(params[:id])
   end
 

@@ -1,0 +1,8 @@
+<h2>Songs</h2>
+<%= @songs.each do |song| %>
+    <%= image_tag('song.cover') %><br>
+    <%= song.album %><br>
+    <%= song.year %><br>
+    <%= song.ylink %><br>
+    <br>
+<% end %>

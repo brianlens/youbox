@@ -1,5 +1,7 @@
-<h1>Artist <%= link_to "New Artist", new_artist_path%></h1>
+<h1>Welcome, here you can find your collection</h1>
 
 <% @artists.each do |artist| %>
     <p><%= link_to artist.name, artist %></p>
 <% end %>
+<br>
+<h3><%= link_to "Add an artist", new_artist_path%></h3>
